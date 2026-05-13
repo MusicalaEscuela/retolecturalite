@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Reto Musicala Lite | Lee tus primeras notas</title>
+  <meta
+    name="description"
+    content="Un mini reto de teoria musical de Musicala. 5 preguntas, feedback inmediato y una forma ligera de empezar a leer notas."
+  />
+  <meta name="theme-color" content="#7c3aed" />
+
+  <meta property="og:title" content="Reto Musicala Lite" />
+  <meta
+    property="og:description"
+    content="Lee tus primeras notas musicales con un mini reto interactivo de Musicala."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/musi.png" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="icon" href="./assets/logo.png" type="image/png" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <div class="page-shell">
+    <header class="site-header" id="top">
+      <div class="container header-container">
+        <a href="#top" class="brand" aria-label="Ir al inicio">
+          <img src="./assets/logo.png" alt="Logo de Musicala" class="brand-logo" />
+          <div class="brand-text">
+            <span class="brand-name">Musicala</span>
+            <span class="brand-subtitle">Herramientas Lite</span>
+          </div>
+        </a>
+
+        <a
+          class="header-musibot-pill"
+          href="https://musicala.github.io/musibot/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Musibot 🤖
+        </a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero-section">
+        <div class="container hero-content">
+          <p class="eyebrow">Herramienta lite · Musicala</p>
+          <h1>¿Puedes leer estas notas?</h1>
+          <p class="hero-subtitle">
+            5 preguntas de teoría musical. Sin presión. Con Musi.
+          </p>
+          <button class="btn btn-primary btn-hero" type="button" data-go-tutorial>
+            Empezar reto →
+          </button>
+          <img
+            src="./assets/musi.png"
+            alt="Musi, mascota de Musicala"
+            class="hero-musi"
+          />
+        </div>
+      </section>
+
+      <section class="game-section section" id="reto">
+        <div class="container">
+          <article class="game-card" data-game>
+            <div class="game-screen is-active" data-screen="intro">
+              <span class="game-tag">Nivel inicial</span>
+              <h3>Reto Musicala Lite</h3>
+              <p>Identifica 5 notas en el pentagrama.</p>
+
+              <div class="intro-pills" aria-label="Datos del reto">
+                <span>5 notas</span>
+                <span>Clave de Sol</span>
+                <span>Feedback inmediato</span>
+              </div>
+
+              <div class="game-actions game-actions--intro">
+                <button class="btn btn-primary" type="button" data-go-tutorial>
+                  Ver el pentagrama primero
+                </button>
+                <button class="btn btn-secondary" type="button" data-start-game>
+                  Empezar directo
+                </button>
+              </div>
+            </div>
+
+            <div class="game-screen" data-screen="tutorial">
+              <div class="tutorial-header">
+                <span class="game-tag">Tutorial · Pentagrama</span>
+                <div class="tutorial-dots" data-tutorial-dots></div>
+              </div>
+
+              <div class="tutorial-steps">
+                <div class="tutorial-step" data-tutorial-step="1">
+                  <h3>El pentagrama tiene 5 líneas</h3>
+                  <p>
+                    Cada línea y espacio tiene un nombre. Las notas se ubican
+                    en líneas o en los espacios entre ellas.
+                  </p>
+                  <div class="tutorial-staff-wrap">
+                    <svg
+                      viewBox="0 0 520 200"
+                      width="100%"
+                      height="auto"
+                      style="display:block;overflow:visible"
+                      aria-label="Pentagrama con 5 líneas"
+                    >
+                      <line data-line="1" x1="82" y1="135" x2="510" y2="135" stroke="#2a1f3d" stroke-width="2" opacity="0"/>
+                      <line data-line="2" x1="82" y1="115" x2="510" y2="115" stroke="#2a1f3d" stroke-width="2" opacity="0"/>
+                      <line data-line="3" x1="82" y1="95" x2="510" y2="95" stroke="#2a1f3d" stroke-width="2" opacity="0"/>
+                      <line data-line="4" x1="82" y1="75" x2="510" y2="75" stroke="#2a1f3d" stroke-width="2" opacity="0"/>
+                      <line data-line="5" x1="82" y1="55" x2="510" y2="55" stroke="#2a1f3d" stroke-width="2" opacity="0"/>
+
+                      <text data-label="1" x="520" y="139" font-size="18" font-weight="800" fill="#7c3aed" opacity="0" font-family="system-ui,sans-serif">1ª</text>
+                      <text data-label="2" x="520" y="119" font-size="18" font-weight="800" fill="#7c3aed" opacity="0" font-family="system-ui,sans-serif">2ª</text>
+                      <text data-label="3" x="520" y="99" font-size="18" font-weight="800" fill="#7c3aed" opacity="0" font-family="system-ui,sans-serif">3ª</text>
+                      <text data-label="4" x="520" y="79" font-size="18" font-weight="800" fill="#7c3aed" opacity="0" font-family="system-ui,sans-serif">4ª</text>
+                      <text data-label="5" x="520" y="59" font-size="18" font-weight="800" fill="#7c3aed" opacity="0" font-family="system-ui,sans-serif">5ª</text>
+                    </svg>
+                  </div>
+                  <p class="tutorial-hint">
+                    Las líneas se cuentan de abajo hacia arriba.
+                  </p>
+                </div>
+
+                <div class="tutorial-step" data-tutorial-step="2">
+                  <h3>Las notas van EN las líneas...</h3>
+                  <p>
+                    Cuando una nota está atravesada por una línea, decimos que
+                    está <strong>en esa línea</strong>.
+                  </p>
+                  <div class="tutorial-staff-wrap">
+                    <svg
+                      viewBox="0 0 520 200"
+                      width="100%"
+                      height="auto"
+                      style="display:block;overflow:visible"
+                      aria-label="Nota Sol en la segunda línea"
+                    >
+                      <line x1="82" y1="135" x2="510" y2="135" stroke="#2a1f3d" stroke-width="2"/>
+                      <line x1="82" y1="115" x2="510" y2="115" stroke="#7c3aed" stroke-width="3"/>
+                      <line x1="82" y1="95" x2="510" y2="95" stroke="#2a1f3d" stroke-width="2"/>
+                      <line x1="82" y1="75" x2="510" y2="75" stroke="#2a1f3d" stroke-width="2"/>
+                      <line x1="82" y1="55" x2="510" y2="55" stroke="#2a1f3d" stroke-width="2"/>
+
+                      <text x="86" y="130" font-size="106" font-family="'Segoe UI Symbol','Apple Symbols','Noto Music',FreeSerif,serif" fill="#3b0764">&#x1D11E;</text>
+
+                      <ellipse cx="300" cy="115" rx="13" ry="9" transform="rotate(-15 300 115)" fill="#7c3aed"/>
+                      <line x1="311" y1="115" x2="311" y2="57" stroke="#7c3aed" stroke-width="2.5"/>
+
+                      <rect x="240" y="128" width="120" height="26" rx="13" fill="#7c3aed"/>
+                      <text x="300" y="146" text-anchor="middle" font-size="14" font-weight="800" fill="white" font-family="system-ui,sans-serif">Sol · 2ª línea</text>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="tutorial-step" data-tutorial-step="3">
+                  <h3>...o en los espacios entre líneas</h3>
+                  <p>
+                    Cuando la nota está entre dos líneas, decimos que está
+                    <strong>en ese espacio</strong>. Hay 4 espacios en total.
+                  </p>
+                  <div class="tutorial-staff-wrap">
+                    <svg
+                      viewBox="0 0 520 200"
+                      width="100%"
+                      height="auto"
+                      style="display:block;overflow:visible"
+                      aria-label="Nota Fa en el primer espacio"
+                    >
+                      <rect x="82" y="116" width="428" height="19" fill="#ede9fe" rx="2"/>
+
+                      <line x1="82" y1="135" x2="510" y2="135" stroke="#2a1f3d" stroke-width="2"/>
+                      <line x1="82" y1="115" x2="510" y2="115" stroke="#2a1f3d" stroke-width="2"/>
+                      <line x1="82" y1="95" x2="510" y2="95" stroke="#2a1f3d" stroke-width="2"/>
+                      <line x1="82" y1="75" x2="510" y2="75" stroke="#2a1f3d" stroke-width="2"/>
+                      <line x1="82" y1="55" x2="510" y2="55" stroke="#2a1f3d" stroke-width="2"/>
+
+                      <text x="86" y="130" font-size="106" font-family="'Segoe UI Symbol','Apple Symbols','Noto Music',FreeSerif,serif" fill="#3b0764">&#x1D11E;</text>
+
+                      <ellipse cx="300" cy="125" rx="13" ry="9" transform="rotate(-15 300 125)" fill="#9333ea"/>
+                      <line x1="311" y1="125" x2="311" y2="67" stroke="#9333ea" stroke-width="2.5"/>
+
+                      <rect x="228" y="138" width="144" height="26" rx="13" fill="#9333ea"/>
+                      <text x="300" y="156" text-anchor="middle" font-size="14" font-weight="800" fill="white" font-family="system-ui,sans-serif">Fa · 1er espacio</text>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="tutorial-step" data-tutorial-step="4">
+                  <h3>¡Ya puedes empezar!</h3>
+                  <p>
+                    En este reto vas a ver notas en las 5 líneas del pentagrama.
+                    Tu misión: decir el nombre correcto de cada una.
+                  </p>
+                  <div class="tutorial-musi">
+                    <img src="./assets/musi.png" alt="Musi" class="tutorial-musi-img" />
+                    <p class="tutorial-musi-msg">
+                      "Recuerda: las líneas van de abajo hacia arriba. Línea 1 es la más baja. 🎵"
+                    </p>
+                  </div>
+                  <button class="btn btn-primary" type="button" data-start-game>
+                    ¡Empezar el reto!
+                  </button>
+                </div>
+              </div>
+
+              <div class="tutorial-nav">
+                <button class="btn btn-ghost" type="button" data-tutorial-prev>
+                  ← Anterior
+                </button>
+                <button class="btn btn-secondary" type="button" data-tutorial-next>
+                  Siguiente →
+                </button>
+              </div>
+            </div>
+
+            <div class="game-screen" data-screen="question">
+              <div class="game-topbar">
+                <div>
+                  <span class="game-progress-label">Pregunta</span>
+                  <strong><span data-current-question>1</span> / <span data-total-questions>5</span></strong>
+                </div>
+                <div>
+                  <span class="game-progress-label">Puntaje</span>
+                  <strong><span data-score>0</span> / <span data-total-score>5</span></strong>
+                </div>
+              </div>
+
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-label="Progreso del reto"
+                aria-valuemin="0"
+                aria-valuemax="5"
+                aria-valuenow="0"
+              >
+                <span data-progress-bar></span>
+              </div>
+
+              <div class="staff-card">
+                <p class="question-title" data-question-title>
+                  ¿Qué nota aparece en el pentagrama?
+                </p>
+                <div class="staff-svg-wrap">
+                  <svg
+                    id="game-staff-svg"
+                    viewBox="0 0 520 200"
+                    width="100%"
+                    height="auto"
+                    style="display:block;overflow:visible"
+                    aria-label="Pentagrama con nota"
+                    data-staff-svg
+                  ></svg>
+                </div>
+                <p class="question-position" data-question-position hidden></p>
+              </div>
+
+              <div class="options-grid" data-options aria-label="Opciones de respuesta"></div>
+
+              <div class="feedback-box" data-feedback aria-live="polite">
+                Elige una respuesta para continuar.
+              </div>
+
+              <div class="game-actions">
+                <button class="btn btn-secondary" type="button" data-next-question disabled>
+                  Siguiente
+                </button>
+                <button class="btn btn-ghost" type="button" data-reset-game>
+                  Reiniciar
+                </button>
+              </div>
+            </div>
+
+            <div class="game-screen" data-screen="result">
+              <div class="result-card">
+                <span class="result-emoji" data-result-emoji>✨</span>
+                <span class="result-kicker" data-result-badge>Resultado final</span>
+                <h3 data-result-title>Explorador Musical</h3>
+                <p class="result-score">
+                  Obtuviste <strong><span data-final-score>0</span> /
+                  <span data-final-total>5</span></strong>
+                </p>
+                <p data-result-description>...</p>
+                <p class="result-cta-copy">
+                  ¿Quieres seguir? Musicala tiene clases para tu nivel.
+                </p>
+
+                <div class="result-links">
+                  <a
+                    class="result-link result-link--primary"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-link-whatsapp
+                  >
+                    <span class="result-link-icon">💬</span>
+                    <div>
+                      <strong>WhatsApp</strong>
+                      <span>Habla con nosotros</span>
+                    </div>
+                  </a>
+
+                  <a
+                    class="result-link"
+                    href="https://musicala.github.io/musibot/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-link-musibot
+                  >
+                    <span class="result-link-icon">🤖</span>
+                    <div>
+                      <strong>Musibot</strong>
+                      <span>Pregunta por programas</span>
+                    </div>
+                  </a>
+
+                  <a
+                    class="result-link"
+                    href="https://musicala.com.co"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-link-website
+                  >
+                    <span class="result-link-icon">🌐</span>
+                    <div>
+                      <strong>musicala.com.co</strong>
+                      <span>Conoce la escuela</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="result-actions">
+                  <button class="btn btn-ghost" type="button" data-reset-game>
+                    Repetir reto
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-simple">
+        <a
+          href="https://musicala.com.co"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-brand"
+        >
+          <img src="./assets/logo.png" alt="Musicala" class="footer-logo" />
+          <span>Musicala</span>
+        </a>
+        <small>
+          © <span data-current-year>2026</span> Musicala · Herramienta lite · Bogotá, Colombia
+        </small>
+      </div>
+    </footer>
+  </div>
+
+  <noscript>
+    <div class="noscript-message">
+      Para usar el Reto Musicala Lite necesitas activar JavaScript en tu navegador.
+    </div>
+  </noscript>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
