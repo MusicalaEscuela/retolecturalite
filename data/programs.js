@@ -147,7 +147,7 @@ export const FEATURED_LINKS = [
     icon: "💬",
     title: "WhatsApp",
     description: "Habla con Musicala y recibe orientación sobre clases, planes y modalidades.",
-    url: "https://wa.me/573195477475?text=Hola%20Musicala%2C%20hice%20el%20Reto%20Musicala%20Lite%20y%20quiero%20recibir%20informaci%C3%B3n.",
+    url: "https://wa.me/573193529475?text=Hola%20Musicala%2C%20hice%20el%20Reto%20Musicala%20Lite%20y%20quiero%20recibir%20informaci%C3%B3n.",
     ctaLabel: "Hablar por WhatsApp",
     isPrimary: true
   },
@@ -165,7 +165,7 @@ export const FEATURED_LINKS = [
     icon: "🌐",
     title: "Página web",
     description: "Explora más información sobre Musicala y sus servicios artísticos.",
-    url: "https://musicala.com.co",
+    url: "https://www.imusicala.com",
     ctaLabel: "Ir a la página web",
     isPrimary: false
   }
