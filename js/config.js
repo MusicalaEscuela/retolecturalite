@@ -4,9 +4,9 @@
 // =========================================================
 
 export const CONFIG = {
-  whatsappNumber: '573195477475',
+  whatsappNumber: '573193529475',
   whatsappDefaultMessage:
     'Hola Musicala, hice el Reto Musicala Lite y quiero conocer las clases de música.',
   musibotUrl: 'https://musicala.github.io/musibot/',
-  websiteUrl: 'https://musicala.com.co'
+  websiteUrl: 'https://www.imusicala.com'
 };

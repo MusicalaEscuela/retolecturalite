@@ -49,8 +49,10 @@ export const RESULTS = [
     emoji: '✨',
     description:
       'Reconociste todas las notas. Ya tienes una base fuerte para subir de nivel con ritmo, lectura aplicada, oído e instrumento.',
+    secretMessage:
+      'Wow. Por lograr este puntaje te ganaste una clase de cortesía sin ningún costo. Reclámala escribiendo a nuestro WhatsApp con tu palabra secreta.',
     whatsappMessage:
-      'Hola Musicala, hice el Reto Musicala Lite, saqué puntaje perfecto y quiero conocer el siguiente nivel de clases.'
+      'Hola Musicala, logré 5/5 en el Reto Musicala Lectura. Palabra secreta: MANITO MUSICALA. Quiero reclamar mi clase de cortesía sin costo.'
   }
 ];
 

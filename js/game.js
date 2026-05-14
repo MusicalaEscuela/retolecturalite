@@ -15,7 +15,8 @@ const state = {
   score: 0,
   hasAnswered: false,
   tutorialStep: 1,
-  totalTutorialSteps: 4
+  totalTutorialSteps: 4,
+  autoAdvanceTimer: null
 };
 
 export function initGame(CONFIG) {
@@ -72,13 +73,7 @@ function setupNextButton() {
   document.querySelector('[data-next-question]')?.addEventListener('click', () => {
     if (!state.hasAnswered) return;
 
-    if (isLastQuestion()) {
-      finishGame();
-      return;
-    }
-
-    state.currentIndex += 1;
-    renderQuestion();
+    goToNextQuestion();
   });
 }
 
@@ -161,6 +156,7 @@ function resetTutorialLines() {
 }
 
 function startGame() {
+  clearAutoAdvance();
   state.questions = shuffleQuestions(QUESTIONS);
   state.currentIndex = 0;
   state.score = 0;
@@ -172,6 +168,7 @@ function startGame() {
 }
 
 function resetGame() {
+  clearAutoAdvance();
   state.currentIndex = 0;
   state.score = 0;
   state.hasAnswered = false;
@@ -198,6 +195,7 @@ function shuffleQuestions(questions) {
 }
 
 function renderQuestion() {
+  clearAutoAdvance();
   const question = getCurrentQuestion();
 
   if (!question) {
@@ -343,7 +341,34 @@ function handleAnswer(selected) {
   updateScore();
   markOptions(selected, question.correct);
   showFeedback(isCorrect, question);
-  enableNext();
+  scheduleAutoAdvance();
+}
+
+function scheduleAutoAdvance() {
+  clearAutoAdvance();
+
+  state.autoAdvanceTimer = window.setTimeout(() => {
+    goToNextQuestion();
+  }, 1100);
+}
+
+function clearAutoAdvance() {
+  if (!state.autoAdvanceTimer) return;
+
+  window.clearTimeout(state.autoAdvanceTimer);
+  state.autoAdvanceTimer = null;
+}
+
+function goToNextQuestion() {
+  clearAutoAdvance();
+
+  if (isLastQuestion()) {
+    finishGame();
+    return;
+  }
+
+  state.currentIndex += 1;
+  renderQuestion();
 }
 
 function markOptions(selected, correct) {
@@ -387,6 +412,7 @@ function finishGame() {
   setText('[data-final-score]', state.score);
   setText('[data-final-total]', state.questions.length);
   setText('[data-result-description]', result.description || '');
+  updateSecretReward(result.secretMessage);
 
   if (whatsappLink) {
     whatsappLink.href = getWhatsappUrl(result.whatsappMessage);
@@ -421,6 +447,15 @@ function updateTotals() {
 
 function updateScore() {
   setText('[data-score]', state.score);
+}
+
+function updateSecretReward(message) {
+  const rewardBox = document.querySelector('[data-secret-reward]');
+
+  if (!rewardBox) return;
+
+  rewardBox.hidden = !message;
+  rewardBox.textContent = message || '';
 }
 
 function updateProgress() {
