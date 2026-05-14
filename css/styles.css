@@ -54,6 +54,10 @@ body {
   overflow-x: hidden;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 img,
 svg {
   display: block;
@@ -482,7 +486,7 @@ button {
 }
 
 .question-title {
-  margin: 0 0 1.2rem;
+  margin: 0 0 0.85rem;
   color: var(--color-text);
   font-size: 1.1rem;
   font-weight: 900;
@@ -503,8 +507,8 @@ button {
 .staff-svg-wrap {
   background: linear-gradient(135deg, #fefefe 0%, #f5f3ff 100%);
   border-radius: 16px;
-  padding: 8px 4px;
-  margin: 0 0 1rem;
+  padding: 6px 2px;
+  margin: 0 0 0.9rem;
   overflow: hidden;
 }
 
@@ -513,6 +517,30 @@ button {
   height: auto;
   display: block;
   overflow: visible;
+}
+
+.line-reminder {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.65rem;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.9rem auto 0;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(14, 165, 233, 0.18);
+  border-radius: 999px;
+  color: var(--color-muted);
+  background: rgba(240, 249, 255, 0.86);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.line-reminder strong {
+  color: var(--color-primary-dark);
+  font-weight: 950;
 }
 
 .options-grid {
@@ -565,6 +593,11 @@ button {
   color: var(--color-muted);
   background: rgba(255, 255, 255, 0.7);
   font-weight: 750;
+}
+
+.staff-card .feedback-box {
+  margin: 0 auto 0.85rem;
+  max-width: 760px;
 }
 
 .feedback-box.is-success {
@@ -657,6 +690,83 @@ button {
   height: auto;
   display: block;
   overflow: visible;
+}
+
+.line-hand-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin: 1.25rem 0 1rem;
+}
+
+.line-hand-card {
+  min-height: 260px;
+  overflow: hidden;
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  border-radius: 22px;
+  background: linear-gradient(135deg, #ffffff 0%, #fef9c3 42%, #ecfeff 100%);
+  box-shadow: 0 12px 28px rgba(76, 29, 149, 0.08);
+}
+
+.line-hand-image {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: contain;
+  object-position: center;
+  padding: 0.45rem;
+}
+
+.line-names-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.line-names-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 48px;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid rgba(124, 58, 237, 0.13);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 8px 18px rgba(76, 29, 149, 0.05);
+}
+
+.line-names-list span {
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.line-names-list strong {
+  color: var(--color-primary-dark);
+  font-size: 1.12rem;
+  font-weight: 950;
+}
+
+.memory-sequence {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  width: fit-content;
+  margin-top: 0.25rem !important;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  color: var(--color-text) !important;
+  background: var(--color-yellow-soft);
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.memory-sequence strong {
+  color: var(--color-primary-dark);
 }
 
 .tutorial-musi {
@@ -759,6 +869,18 @@ button {
 .result-card [data-result-description] {
   max-width: 620px;
   margin: 1rem auto 0;
+}
+
+.secret-reward {
+  max-width: 720px;
+  margin: 1.15rem auto 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(34, 197, 94, 0.36);
+  border-radius: var(--radius-md);
+  color: #14532d;
+  background: #f0fdf4;
+  font-weight: 850;
+  line-height: 1.45;
 }
 
 .result-cta-copy {
@@ -960,6 +1082,27 @@ button {
     min-width: 0;
   }
 
+  .staff-card {
+    padding: 1rem 0.85rem;
+  }
+
+  .question-title {
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+
+  .staff-card .feedback-box {
+    min-height: 46px;
+    margin-bottom: 0.7rem;
+    padding: 0.7rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .staff-svg-wrap {
+    border-radius: 14px;
+    margin-bottom: 0.7rem;
+  }
+
   .options-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -970,6 +1113,21 @@ button {
 
   .result-links {
     grid-template-columns: 1fr;
+  }
+
+  .line-hand-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .line-hand-card,
+  .line-hand-image {
+    min-height: 220px;
+  }
+
+  .line-reminder {
+    border-radius: 18px;
+    margin-top: 0.65rem;
+    padding: 0.55rem 0.7rem;
   }
 
   .tutorial-header {
@@ -1010,6 +1168,15 @@ button {
 
   .tutorial-staff-wrap {
     padding: 6px 2px 2px;
+  }
+
+  .line-hand-card,
+  .line-hand-image {
+    min-height: 190px;
+  }
+
+  .line-names-list li {
+    min-height: 44px;
   }
 }
 
